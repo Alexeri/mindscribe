@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     if (!userId) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
-
+    {/* REMOVE COMMENT BELOW TO ENABLE AI CHAT */}
     /* const embedding = await getEmbeddingForNote(title, content); */
 
     const note = await prisma.$transaction(async (tx) => {
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
           userId,
         },
       });
-
+      {/* REMOVE COMMENT BELOW TO ENABLE AI CHAT */}
       /* await notesIndex.upsert([
         {
           id: note.id,
@@ -80,7 +80,7 @@ export async function PUT(req: Request) {
     if (!userId || userId !== note.userId) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
-
+    {/* REMOVE COMMENT BELOW TO ENABLE AI CHAT */}
     /* const embedding = await getEmbeddingForNote(title, content); */
 
     const updatedNote = await prisma.$transaction(async (tx) => {
@@ -91,7 +91,7 @@ export async function PUT(req: Request) {
           content,
         },
       });
-
+      {/* REMOVE COMMENT BELOW TO ENABLE AI CHAT */}
       /* await notesIndex.upsert([
         {
           id,
@@ -164,7 +164,7 @@ export async function DELETE(req: Request) {
     return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }
-
+{/* REMOVE COMMENT BELOW TO ENABLE AI CHAT */}
 /* async function getEmbeddingForNote(title: string, content: string | undefined) {
   return getEmbedding(title + "\n\n" + content ?? "");
 } */

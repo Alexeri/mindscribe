@@ -24,7 +24,7 @@ export default function NavBar() {
           </Link>
           <div className="flex items-center gap-2">
             <SignedIn>
-              <Button variant="link" className="text-md mr-2">
+              <Button variant="link" className="text-md mr-2" asChild>
                 <Link href="/notes">My Notes</Link>
               </Button>
             </SignedIn>

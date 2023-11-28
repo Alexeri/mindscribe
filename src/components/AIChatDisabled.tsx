@@ -29,14 +29,14 @@ export default function AIChatDisabled() {
             <DialogDescription className="flex flex-wrap gap-2"></DialogDescription>
           </DialogHeader>
           <span>
-            The AI chat function has been temporarily disabled to manage costs
+            The AI chat function has been disabled to manage costs
             and prevent spam. For full access to the application, explore the
             source code on my GitHub repository.
           </span>
 
           <DialogFooter>
             <Button variant="secondary" asChild>
-              <Link href="">
+              <Link href="https://github.com/Alexeri/mindscribe" target="_blank">
                 <Github size={20} className="mr-1" />
                 Github
               </Link>
